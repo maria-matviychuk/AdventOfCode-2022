@@ -63,7 +63,6 @@ def first_res(data, row_target=2000000):
 
 def find_possible_position(sx, sy, bx, by, possible_positions, max_value):
     distance = abs(bx - sx) + abs(by - sy) + 1
-    amount_x = distance
     diff = 0
     while distance != 0:
         for sx_n in (sx + distance, sx - distance):
@@ -81,7 +80,6 @@ def check_distance(sx, sy, bx, by, x, y):
 
 
 def second_res(data, max_coord):
-    r = dict()
     inputs = read_data(data)
 
     possible = set()
