@@ -47,7 +47,6 @@ def move_blizzards(blizzards, width, height, matrix):
         while matrix[n_i][n_j] == '#':
             n_i, n_j = blizzard_move(n_i, n_j, dx, dy, width, height)
 
-        # print(matrix[n_i][n_j])
         new_blizzards.append((n_i, n_j, direction))
     return new_blizzards
 
