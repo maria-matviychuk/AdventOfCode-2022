@@ -67,18 +67,6 @@ def iterate_moves(moves, direction):
         moves = moves[index + 1:]
 
 
-def get_to_other_side(line):
-    if '.' not in line:
-        return
-
-    start_dot = line.index('.')
-    if '#' in line:
-        start_wall = line.index('#')
-        if start_wall < start_dot:
-            return
-    return start_dot
-
-
 def move(x, y, dx, dy, width, height):
     return (x + dx) % width, (y + dy) % height
 
